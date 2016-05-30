@@ -1,7 +1,7 @@
 {
   "name": "urlsearchparams",
   "description": "implementaion of URLSearchParams at WHATWG Living Standard https://url.spec.whatwg.org/",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Jxck",
   "bugs": {
     "url": "https://github.com/Jxck/URLSearchParams/issues"
@@ -43,6 +43,7 @@
     "type": "cp node_modules/utf8-encoding/utf8-encoding.d.ts types/",
     "prepublish": "npm run tsc",
     "test": "npm run tsc && node test/test.js && \\rm -f npm-debug.log && echo open test/index.html in your browser",
-    "tsc": "tsc urlsearchparams.ts --target ES5 --module commonjs --sourceMap"
+    "tsc": "tsc urlsearchparams.ts --target ES5 --module commonjs --sourceMap",
+	"build": "npm run tsc"
   }
 }

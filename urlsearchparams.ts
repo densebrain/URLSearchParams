@@ -25,8 +25,9 @@ if (typeof window === "undefined") { // in node.js
   TextEncoder = TextEncoding.TextEncoder;
   TextDecoder = TextEncoding.TextDecoder;
 } else {
-  TextEncoder = window.TextEncoder;
-  TextDecoder = window.TextDecoder;
+  const w = window as any
+  TextEncoder = w.TextEncoder;
+  TextDecoder = w.TextDecoder;
 }
 
 // save platform implementation if exists
