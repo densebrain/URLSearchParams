@@ -6,9 +6,8 @@ declare module URLSearchParams {
     getAll(name: USVString):                   USVString[];
     has(name: USVString):                      boolean;
     set(name: USVString, value: USVString):    void;
-    toString():                                string; // stringifier;
-    // iterable<USVString, USVString>;
-  };
+    toString():                                string;
+  }
   var URLSearchParams: {
     prototype: IURLSearchParams;
     new (init?: string): IURLSearchParams;
